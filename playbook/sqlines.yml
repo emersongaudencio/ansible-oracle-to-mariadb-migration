@@ -1,0 +1,18 @@
+---
+- name: SQLINES Setup
+  gather_facts: false
+  hosts: all
+  tasks:
+     - name: Transfering SQLINES install script
+       copy: src=sqlines/sqlines_install.sh dest=/tmp mode=0777
+
+     - name: Running SQLINES install script
+       command: "sh /tmp/sqlines_install.sh {{ user }}"
+       register: cmd_install
+     - debug: msg="{{ cmd_install.stdout_lines|replace('\\t',' ') }}"
+     - debug: msg="{{ cmd_install.stderr_lines|replace('\\t',' ') }}"
+
+     - name: Removing - SQLINES install script
+       file:
+         path: /tmp/maxscale_install.sh
+         state: absent
