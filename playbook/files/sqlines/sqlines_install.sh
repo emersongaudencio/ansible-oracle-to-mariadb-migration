@@ -11,12 +11,13 @@ else
         echo user $user doesn\'t exists, creating $user right now!
         adduser $user
 fi
+
+# go to user directory
 cd /home/$user
 
 # configure variables
-export SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+export SCRIPT_PATH=/home/$user
 export DATA_DIR=$SCRIPT_PATH
-cd $SCRIPT_PATH
 
 ####### PACKAGES ###########################
 # -------------- For RHEL/CentOS 7 --------------

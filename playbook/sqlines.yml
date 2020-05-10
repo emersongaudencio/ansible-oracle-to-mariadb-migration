@@ -14,5 +14,5 @@
 
      - name: Removing - SQLINES install script
        file:
-         path: /tmp/maxscale_install.sh
+         path: /tmp/sqlines_install.sh
          state: absent
