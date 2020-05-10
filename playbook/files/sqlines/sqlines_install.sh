@@ -48,6 +48,7 @@ wget https://github.com/emersongaudencio/linux_packages/raw/master/SOURCE/instan
 unzip instantclient-basic-linux.x64-12.2.0.1.0.zip
 unzip instantclient-sqlplus-linux.x64-12.2.0.1.0.zip
 unzip instantclient-tools-linux.x64-12.2.0.1.0.zip
+ln -s $SCRIPT_PATH/instantclient_12_2/libclntsh.so.12.1 $SCRIPT_PATH/instantclient_12_2/libclntsh.so
 
 ##### CONFIG .bashrc - Oracle #############
 echo '# oracle-config' >> $SCRIPT_PATH/.bashrc
