@@ -35,6 +35,8 @@ e.g:
 
 * [Oracle to MariaDB Migration](http://www.sqlines.com/oracle-to-mariadb)
 
+* [Oracle to MariaDB Migration - Deep dive](https://severalnines.com/database-blog/migration-oracle-database-mariadb-deep-dive)
+
 ### Install SQLines on Linux (CentOS/Redhat/AmazonLinux)
 ```
 sh install_ansible_sqlines.sh
